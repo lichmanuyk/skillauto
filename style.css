@@ -1,0 +1,43 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_item {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo img {
+    height: 40px;
+}
