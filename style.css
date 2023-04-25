@@ -9,6 +9,11 @@ html {
     background-color: black;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #b8b8b8;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -39,6 +44,7 @@ html {
 .logo {
     display: flex;
     max-width: 191px;
+    margin-right: 150px;
 }
 
 .menu {
@@ -51,6 +57,7 @@ html {
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-align: center;
 }
 
 .menu_item a {
@@ -174,7 +181,6 @@ html {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
     top: 0;bottom: 0;left: 0;right: 0;
     z-index: 1;
     display: flex;
@@ -197,38 +203,45 @@ h1 {
 .services {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service {
     min-width: 50%;
-    height: 350px;
+    height: 500px;
     display: flex;
     justify-content: center;
     cursor: pointer;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
     background-size: cover;
 }
 
 .service:first-child {
-    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/1.jpg") 0% 0% / cover no-repeat;
+    background: url("./img/uslugi-bg/ppf-bg.JPG") 0% 50% / cover no-repeat;
 }
 
 .service:nth-child(2) {
-    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/2.jpg") 0% 0% / cover no-repeat;
+    background: url("./img/uslugi-bg/ceramica-bg.JPG") 0% 46% / cover no-repeat;
 }
 
 .service:nth-child(3) {
-    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/3.jpg") 0% 0% / cover no-repeat;
+    background: url("./img/uslugi-bg/polerka-bg.JPG") 0% 56% / cover no-repeat;
 }
 
 .service:nth-child(4) {
-    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/4.jpg") 0% 0% / cover no-repeat;
+    background: url("./img/uslugi-bg/myjnia-bg.JPG") 0% 31% / cover no-repeat;
+}
+
+.service:nth-child(5) {
+    background: url("./img/uslugi-bg/pranie-bg-1.JPG") 0% 50% / cover no-repeat;
+}
+
+.service:nth-child(6) {
+    background: url("./img/uslugi-bg/color-bg.JPG") 0% 19% / cover no-repeat;
 }
 
 .service__content {
-    color: #fff;
     background: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
@@ -241,7 +254,7 @@ h1 {
 }
 
 .service__content img {
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 .service__content span {
     font-size: 24px;
@@ -258,21 +271,14 @@ h1 {
     box-sizing: border-box;
     padding: 20px;
     background-color: black;
-    color: #fff;
     align-items: center;
 }
 
 .map__content {
-    flex: 2;
+    flex: 1;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-
-.map__content ul {
-    margin: -10px 0 30px -10px;
 }
 
 .map_contact {
@@ -290,11 +296,11 @@ h1 {
 
 .map_contact a {
     text-decoration: underline;
-    color: #fff;
+    color: #b8b8b8;
 }
 
 .map__iframe {
-    flex: 3;
+    flex: 1;
     width: 90%;
     height: 90%;
 }
@@ -307,7 +313,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 100px;
-    color: #fff;
     font-size: 12px;
 }
 
@@ -318,7 +323,7 @@ footer {
 }
 
 
-@media screen and (max-width: 1000px) {    
+@media screen and (max-width: 1100px) {    
     .header .menu {
         display: none;
     }
