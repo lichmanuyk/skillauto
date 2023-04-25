@@ -38,6 +38,7 @@ html {
 
 .logo {
     display: flex;
+    max-width: 191px;
 }
 
 .menu {
