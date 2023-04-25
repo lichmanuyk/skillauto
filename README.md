@@ -18,3 +18,4 @@ When click on logo - move to top
 Хостинг+Домен
 email  detailingorg22@gmail.com
 иконки для контактов
+покинуть сайт через гугл перфоманс
