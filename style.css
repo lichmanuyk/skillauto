@@ -1,28 +1,32 @@
 html, body {
     padding: 0;
     margin: 0;
+    user-select: none;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.section {
-    height: 100vh;
-    display: flex;
-    border-bottom: 1px solid #ccc;
+.header {
     position: relative;
+    z-index: 2;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     justify-content: center;
-    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 100px;
+}
+
+.header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
 }
 
 .menu {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 40px;
     display: flex;
     align-items: center;
 }
@@ -31,13 +35,184 @@ html, body {
     margin: 0 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu_item a {
     text-decoration: none;
-    color: black;
+    color: #B8B8B8;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
-.logo img {
-    height: 40px;
+.menu_item:hover a {
+    color: #fff;
+}
+
+.promo {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin-top: -100px;
+    position: relative;
+}
+
+.promo__video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1px;
+}
+
+.promo__content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    top: 0;bottom: 0;left: 0;right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+.promo__content_description {
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    line-height: 24px;
+}
+
+.services {
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.service {
+    min-width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.service:first-child {
+    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/1.jpg") 0% 0% / cover no-repeat;
+}
+
+.service:nth-child(2) {
+    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/2.jpg") 0% 0% / cover no-repeat;
+}
+
+.service:nth-child(3) {
+    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/3.jpg") 0% 0% / cover no-repeat;
+}
+
+.service:nth-child(4) {
+    background: url("https://dwash.pl/wp-content/themes/diamond-wash/images/oferta/4.jpg") 0% 0% / cover no-repeat;
+}
+
+.service__content {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.service__content img {
+    margin-bottom: 20px;;
+}
+.service__content span {
+    font-size: 24px;
+}
+
+.service__content:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+}
+
+.map__content {
+    flex: 2;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.map__content ul {
+    margin: -10px 0 30px -10px;
+}
+
+.map_contact {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    margin-bottom: 15px;
+}
+
+.map_contact img {
+    margin-right: 10px;
+    width: 21px;
+    height: 20px;
+}
+
+.map_contact a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.map__iframe {
+    flex: 3;
+    width: 90%;
+    height: 90%;
+}
+
+footer {
+    height: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    height: 100%;
 }
