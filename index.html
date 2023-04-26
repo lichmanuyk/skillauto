@@ -100,46 +100,38 @@
     </section>
     <section class="map" id="contacts">
         <div class="map__content">
-            <form class="connect" id="main_form">
-
-                <!-- Hidden Requires Fields -->
-                <input type="hidden" name="project_name" value="Lake Garda">
-                <input type="hidden" name="admin_email" value="pavel.lichmanuyk@gmail.com">
-                <input type="hidden" name="form_subject" value="Заявка с формы обратной связи">
-                <!-- END Hidden Requires Fields -->
-
-                <h4>Connect with us</h4>
-                <div class="form-group i">
-                    <input type="text" name="name" class="form-control" placeholder="Name" >
-                </div>
-                <div class="form-group i">
-                    <input type="text" name="phone" class="form-control" placeholder="Phone number">
-                </div>
-                <div class="form-group i">	
-                    <input type="email" name="email" class="form-control" placeholder="Email" >
-                </div>
-                <div class="form-group i">
-                    <textarea name="message" class="form-control" rows="4" id="textArea" placeholder="Message"></textarea>
-                </div>
-                <button class="btn">Send</button>
-            </form>
-
-
-            <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/tel.png" alt="">Godziny otwarcia: Pn-Pt 9:00 - 18:00</div>
-            <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/tel.png" alt="">+48516601509</div>
-            <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/point.png" alt="">Budynek VTG Service, Dorodna 33, 03-199 Warszawa</div>
-            <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/point.png" alt="">detailingorg22@gmail.com</div>
-            <div class="map_contact"><img src="https://www.citypng.com/public/uploads/preview/-51609193448mids70tdmp.png" alt=""><img src="https://www.citypng.com/public/uploads/preview/-51609193448mids70tdmp.png" alt=""><a href="https://www.instagram.com/skill.auto/" target="_blank"></a></div>
+            <div class="left">
+                <form class="form">
+                    <h2>Zadaj nam pytanie</h2>
+    
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="SkillAuto">
+                    <input type="hidden" name="admin_email" value="pavel.lichmanuyk@gmail.com">
+                    <input type="hidden" name="form_subject" value="Please call me...">
+                    <!-- END Hidden Required Fields -->
+            
+                    <input type="text" name="Name" placeholder="Imie..." required><br>
+                    <input type="text" name="Phone" placeholder="Telefon..." required><br>
+                    <input type="text" name="Usluga" placeholder="Tvoje pytanie..."><br>
+                    <button>Send</button>
+            
+                </form>
+            </div>
+            <div class="right">
+                <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/tel.png" alt="">Godziny otwarcia: Pn-Pt 9:00 - 18:00</div>
+                <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/tel.png" alt=""><a href="tel:+48794092317">+48 794-092-317</a></div>
+                <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/point.png" alt=""><a href="https://goo.gl/maps/CruMBQUwQtGWXLZG9" target="_blank">Budynek VTG Service, Dorodna 33, 03-199 Warszawa</a></div>
+                <div class="map_contact"><img src="https://dwash.pl/wp-content/themes/diamond-wash/images/point.png" alt=""><a href="mailto::detailingorg22@gmail.com" target="_blank">detailingorg22@gmail.com</a></div>
+                <div class="map_contact"><img src="./img/icons/instagram.png" alt="Instagram"><a href="https://www.instagram.com/skill.auto/" target="_blank">Instagram</a></div>
+                <div class="map_contact"><img src="./img/icons/facebook.png" alt="Facebook"><a href="https://www.instagram.com/skill.auto/" target="_blank">Facebook</a></div>
+            </div>
         </div>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.6332607883164!2d20.982824103027077!3d52.30451057188877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ec93ef6f2ee15%3A0xee79926b30e2feaa!2sSKILL%20AUTO%20-%20Detailing%20studio!5e0!3m2!1sru!2spl!4v1682434176390!5m2!1sru!2spl" style="border:1px solid rgba(0, 0, 0, 0.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <footer>
-        <div class="footer__logo">
-            <img src="./img/logo.png" alt="Logo">
-        </div>
         <span>©Copyright 2023 SkillAuto</span>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         window.onscroll = scrollFunction;
         function scrollFunction() {
@@ -150,21 +142,23 @@
             }
         }
 
-        $("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+        $(document).ready(function() {
+            $("form").submit(function() {
+                var th = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "./mail.php",
+                    data: th.serialize()
+                }).done(function() {
+                    alert("Спасибо, мы с вами свяжемся!");
+                    setTimeout(function() {
+                        // Done Functions
+                        th.trigger("reset");
+                    }, 1000);
+                });
+                return false;
+            });
+        });
     </script>
 </body>
 </html>
