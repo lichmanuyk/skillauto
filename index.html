@@ -139,6 +139,7 @@
         </div>
         <span>©Copyright 2023 SkillAuto</span>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.onscroll = scrollFunction;
         function scrollFunction() {
@@ -148,6 +149,22 @@
                 document.getElementById("header").classList.remove('small')
             }
         }
+
+        $("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
     </script>
 </body>
 </html>
