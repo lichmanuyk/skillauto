@@ -40,7 +40,7 @@
         </div>
     </section>
     <section class="promo" id="top">
-        <video autoplay preload=”none” loop muted playsinline class="promo__video" id="video">
+        <video autoplay loop muted playsinline class="promo__video" poster="./img/promo-bg.jpg">
             <source src="./video.mp4" type="video/mp4">
             <source src="./video.webm" type="video/webm">
             <source src="./video.mov" type="video/mov">
@@ -48,7 +48,7 @@
             <source src="./video.mpeg" type="video/mpeg">
         </video>
         <div class="promo__content">
-            <h1>Czym jest auto detailing 1</h1>
+            <h1>Czym jest auto detailing</h1>
             <span class="promo__content_description">Zoptymalizowany proces kompleksowego czyszczenia, renowacji, konserwacji i zabezpieczenia  pojazdu samochodowego lub jego elementów, zarówno na zewnątrz jak i wewnątrz, w celu podniesienia walorów estetycznych i użytkowych pojazdu, a także przedłużenia jego żywotności.</span>
         </div>
     </section>
@@ -137,13 +137,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
-        window.addEventListener("load", async function (event) {
-            const video = document.getElementById('video');
-            video.play();
-            setTimeout(() => {
-                video.play();
-            })
-        });
         window.onscroll = scrollFunction;
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
