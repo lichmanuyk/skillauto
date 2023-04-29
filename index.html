@@ -43,6 +43,7 @@
         <video autoplay loop muted playsinline class="promo__video" id="video">
             <source src="./video.mp4" type="video/mp4">
             <source src="./video.webm" type="video/webm">
+            <source src="./video.mov" type="video/mov">
         </video>
         <div class="promo__content">
             <h1>Czym jest auto detailing</h1>
@@ -137,7 +138,7 @@
         window.addEventListener("load", (event) => {
             const video = document.getElementById('video');
             video.play()
-            alert(video)
+            console.dir(video)
         });
         window.onscroll = scrollFunction;
         function scrollFunction() {
