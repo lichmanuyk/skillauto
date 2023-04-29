@@ -44,10 +44,10 @@
             <source src="./video.mp4" type="video/mp4">
             <source src="./video.webm" type="video/webm">
         </video>
-        <!-- <div class="promo__content">
+        <div class="promo__content">
             <h1>Czym jest auto detailing</h1>
             <span class="promo__content_description">Zoptymalizowany proces kompleksowego czyszczenia, renowacji, konserwacji i zabezpieczenia  pojazdu samochodowego lub jego elementów, zarówno na zewnątrz jak i wewnątrz, w celu podniesienia walorów estetycznych i użytkowych pojazdu, a także przedłużenia jego żywotności.</span>
-        </div> -->
+        </div>
     </section>
     <section class="services" id="services">
         <div class="service" id="service-1">
@@ -134,10 +134,11 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
-        // window.addEventListener("load", (event) => {
-        //     const video = document.getElementById('video');
-        //     video.play()
-        // });
+        window.addEventListener("load", (event) => {
+            const video = document.getElementById('video');
+            video.play()
+            alert(video)
+        });
         window.onscroll = scrollFunction;
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
