@@ -134,9 +134,10 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
-        window.onload(() => {
-            document.getElementById('video').play()
-        })
+        window.addEventListener("load", (event) => {
+            const video = document.getElementById('video');
+            video.play()
+        });
         window.onscroll = scrollFunction;
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
