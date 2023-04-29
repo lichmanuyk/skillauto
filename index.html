@@ -137,9 +137,12 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
-        window.addEventListener("load", async (event) => {
+        window.addEventListener("load", async function (event) {
             const video = document.getElementById('video');
-            await video.play()
+            video.play();
+            setTimeout(() => {
+                video.play();
+            })
         });
         window.onscroll = scrollFunction;
         function scrollFunction() {
