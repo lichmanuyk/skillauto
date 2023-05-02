@@ -228,6 +228,8 @@ h1 {
     cursor: pointer;
     box-sizing: border-box;
     background-size: cover;
+    text-decoration: none;
+    color: #B8B8B8;
 }
 
 .service:first-child {
