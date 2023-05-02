@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Skill Auto Detailing</title>
+    <link rel="stylesheet" href="./owl.carousel.min.css">
+    <link rel="stylesheet" href="./owl.theme.default.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./owl.carousel.min.js"></script>
+</head>
+<body>
+    <section class="header" id="header">
+        <div class="header__container">
+            <div class="logo"><a href="#top"><img src="./img/logo.png" alt="Logo" width="100%" height="auto"></a></div>
+            <div class="menu">
+                <div class="menu_item"><a href="ppf.html">Zabezpieczenie Foliami PPF</a></div>
+                <div class="menu_item"><a href="ceramica.html">Powłoka Ceramiczna</a></div>
+                <div class="menu_item"><a href="lakier.html">Renowacja Lakieru</a></div>
+                <div class="menu_item"><a href="mycie.html">Mycie Detailingowe</a></div>
+                <div class="menu_item"><a href="wnetrza.html">Czyszczenie Wnętrza</a></div>
+                <div class="menu_item"><a href="color.html">Zmiana Koloru</a></div>
+                <div class="menu_item"><a href="index.html#contacts">Kontakty</a></div>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="ppf.html">Zabezpieczenie Foliami PPF</a></li>
+                  <li><a class="menu__item" href="ceramica.html">Powłoka Ceramiczna</a></li>
+                  <li><a class="menu__item" href="lakier.html">Renowacja Lakieru</a></li>
+                  <li><a class="menu__item" href="mycie.html">Mycie Detailingowe</a></li>
+                  <li><a class="menu__item" href="wnetrza.html">Czyszczenie Wnętrza</a></li>
+                  <li><a class="menu__item" href="color.html">Zmiana Koloru</a></li>
+                  <li><a class="menu__item" href="index.html#contacts">Kontakty</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+      <div class="content">
+        <section class="carousel-container">
+          <div class="carousel">
+            <div class="owl-carousel owl-theme">
+              <img src="./img/interior/IMG_5857.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5858.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5859.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5860.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5862.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5863.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5864.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5865.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5866.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5867.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5870.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5871.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5878.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5879.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5883.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5884.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5885.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5891.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5892.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5893.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5894.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5895.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5896.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5897.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5898.jpg" alt="Czyszczenie Wnętrza">
+              <img src="./img/interior/IMG_5899.jpg" alt="Czyszczenie Wnętrza">
+            </div>
+          </div>
+          <div class="scroll_down_info">
+            Wybierz pakiet oklejania samochodu folią ochronną PPF
+          <a href="#service-info" class="scroll_action">
+            Dowiedz się więcej poniżej!
+            <img src="./img/down-arrow.png" alt="Down-arrow">
+          </a>
+        </section>
+        <section class="service-info" id="service-info">
+          
+        </section>
+      </div>
+      <footer>
+          <span>©Copyright 2023 | SkillAuto</span>
+      </footer>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+          items: 3,
+          dots: false,
+          loop: true,
+          autoplay:true,
+          autoplayTimeout: 2500,
+          autoplayHoverPause: true,
+          nav: true,
+          navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
+          margin: 70,
+          center: true,
+          autoHeight: true,
+          mouseDrag: false,
+          smartSpeed: 1500,
+          // responsiveClass: true,
+        });
+      });
+        window.onscroll = scrollFunction;
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").classList.add('small');
+            } else {
+                document.getElementById("header").classList.remove('small')
+            }
+        }
+    </script>
+</body>
+</html>

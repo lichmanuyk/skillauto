@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Skill Auto Detailing</title>
+    <link rel="stylesheet" href="./owl.carousel.min.css">
+    <link rel="stylesheet" href="./owl.theme.default.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./owl.carousel.min.js"></script>
+</head>
+<body>
+    <section class="header" id="header">
+        <div class="header__container">
+            <div class="logo"><a href="#top"><img src="./img/logo.png" alt="Logo" width="100%" height="auto"></a></div>
+            <div class="menu">
+                <div class="menu_item"><a href="ppf.html">Zabezpieczenie Foliami PPF</a></div>
+                <div class="menu_item"><a href="ceramica.html">Powłoka Ceramiczna</a></div>
+                <div class="menu_item"><a href="lakier.html">Renowacja Lakieru</a></div>
+                <div class="menu_item"><a href="mycie.html">Mycie Detailingowe</a></div>
+                <div class="menu_item"><a href="wnetrza.html">Czyszczenie Wnętrza</a></div>
+                <div class="menu_item"><a href="color.html">Zmiana Koloru</a></div>
+                <div class="menu_item"><a href="index.html#contacts">Kontakty</a></div>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="ppf.html">Zabezpieczenie Foliami PPF</a></li>
+                  <li><a class="menu__item" href="ceramica.html">Powłoka Ceramiczna</a></li>
+                  <li><a class="menu__item" href="lakier.html">Renowacja Lakieru</a></li>
+                  <li><a class="menu__item" href="mycie.html">Mycie Detailingowe</a></li>
+                  <li><a class="menu__item" href="wnetrza.html">Czyszczenie Wnętrza</a></li>
+                  <li><a class="menu__item" href="color.html">Zmiana Koloru</a></li>
+                  <li><a class="menu__item" href="index.html#contacts">Kontakty</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+      <div class="content">
+        <section class="carousel-container">
+          <div class="carousel">
+            <div class="owl-carousel owl-theme">
+              <img src="./img/ceramica/IMG_0582.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_0586.jpeg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_0614.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_0769 2.JPG" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5834.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5835.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5836.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5837.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5838.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5840.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5841.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5842.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5843.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5844.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5845.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5846.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5847.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5848.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5850.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5851.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5852.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5853.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5854.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5855.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5856.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5872.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5873.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5874.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5875.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5876.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5880.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5881.jpg" alt="Ceramica">
+              <img src="./img/ceramica/IMG_5882.jpg" alt="Ceramica">
+              
+            </div>
+          </div>
+          <div class="scroll_down_info">
+            Wybierz pakiet oklejania samochodu folią ochronną PPF
+          <a href="#service-info" class="scroll_action">
+            Dowiedz się więcej poniżej!
+            <img src="./img/down-arrow.png" alt="Down-arrow">
+          </a>
+        </section>
+        <section class="service-info" id="service-info">
+          
+        </section>
+      </div>
+      <footer>
+          <span>©Copyright 2023 | SkillAuto</span>
+      </footer>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+          items: 3,
+          dots: false,
+          loop: true,
+          autoplay:true,
+          autoplayTimeout: 2500,
+          autoplayHoverPause: true,
+          nav: true,
+          navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
+          margin: 70,
+          center: true,
+          autoHeight: true,
+          mouseDrag: false,
+          smartSpeed: 1500,
+          // responsiveClass: true,
+        });
+      });
+        window.onscroll = scrollFunction;
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").classList.add('small');
+            } else {
+                document.getElementById("header").classList.remove('small')
+            }
+        }
+    </script>
+</body>
+</html>

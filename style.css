@@ -231,27 +231,27 @@ h1 {
 }
 
 .service:first-child {
-    background: url("./img/uslugi-bg/ppf-bg.JPG") 0% 50% / cover no-repeat;
+    background: url("./img/service-bg/ppf-bg.JPG") 0% 50% / cover no-repeat;
 }
 
 .service:nth-child(2) {
-    background: url("./img/uslugi-bg/ceramica-bg.JPG") 0% 46% / cover no-repeat;
+    background: url("./img/service-bg/ceramica-bg.JPG") 0% 46% / cover no-repeat;
 }
 
 .service:nth-child(3) {
-    background: url("./img/uslugi-bg/polerka-bg.JPG") 0% 56% / cover no-repeat;
+    background: url("./img/service-bg/polerka-bg.JPG") 0% 56% / cover no-repeat;
 }
 
 .service:nth-child(4) {
-    background: url("./img/uslugi-bg/myjnia-bg.JPG") 0% 31% / cover no-repeat;
+    background: url("./img/service-bg/myjnia-bg.JPG") 0% 31% / cover no-repeat;
 }
 
 .service:nth-child(5) {
-    background: url("./img/uslugi-bg/pranie-bg-1.JPG") 0% 50% / cover no-repeat;
+    background: url("./img/service-bg/pranie-bg-1.JPG") 0% 50% / cover no-repeat;
 }
 
 .service:nth-child(6) {
-    background: url("./img/uslugi-bg/color-bg.JPG") 0% 19% / cover no-repeat;
+    background: url("./img/service-bg/color-bg.JPG") 0% 19% / cover no-repeat;
 }
 
 .service__content {
@@ -523,4 +523,165 @@ footer {
 
 .content {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 30px 0;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.carousel-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.carousel {
+   width: 100%;
+   height: 600px; 
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   margin-top: 70px;
+   margin-bottom: 50px;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 300px;
+    transform: translateY(-50%);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.owl-nav button:hover {
+   background-color: transparent!important;
+   transform: scale(105%);
+   transition: all 0.3s ease;
+}
+
+.owl-nav button img {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.owl-carousel .owl-stage {
+    max-height: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: 600px!important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.scroll_down_info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll_down_info .scroll_action {
+    margin-top: 20px;
+    color: #a08565;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    align-self: center;
+}
+
+.scroll_down_info .scroll_action:hover {
+    transform: scale(105%);
+}
+
+.scroll_down_info .scroll_action img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.ppf-plans {
+    align-self: stretch ;
+    border-top: 1px solid #a08565;
+    display: flex;
+    justify-content: center;
+    padding: 0 200px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.plan {
+    width: 40%;
+    height: 395px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.plan:nth-child(odd) {
+    margin-right: 50px;
+}
+
+.plan img {
+    width: 330px;
+    height: 200px;
+}
+
+.plan__title {
+    text-transform: uppercase;
+    font-size: 21px;
+    color: #a08565;
+    height: 25px;
+}
+
+.plan__desc {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.plan__price {
+    height: 21px;
+}
+
+.plan__price span {
+    color: #a08565;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.ppf__individual {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: #a08565;
+    line-height: 40px;
+}
+
+.ppf__individual a {
+    color: #a08565;
 }
