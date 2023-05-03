@@ -74,10 +74,8 @@
               <img src="./img/polish/IMG_5616.jpeg" alt="Lakier">
             </div>
           </div>
-          <div class="scroll_down_info">
+          <a href="#ppf-plan" class="scroll_down_info">
             Czym jest korekta lakieru nazywana też renowacją lakieru? To jeden z najbardziej popularnych zabiegów detailingowych. Rysy i zmatowienia znikają, lakier znów lśni nieskazitelnym blaskiem. Dzięki polerowaniu usuwamy zarysowania oraz poprawiamy stan wizualny lakieru.
-          <a href="#service-info" class="scroll_action">
-            Dowiedz się więcej poniżej!
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
@@ -96,10 +94,10 @@ Kompleksowe polerowanie samochodu to usługa przeznaczona dla użytkowników, kt
 Cena od 2800
 
         </section>
-      </div>
-      <footer>
+        <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
+        </footer>
+      </div>
     </div>
     <script>
       $(document).ready(function() {
@@ -112,9 +110,8 @@ Cena od 2800
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -128,6 +125,30 @@ Cena od 2800
                 document.getElementById("header").classList.remove('small')
             }
         }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if(window.ResizeObserver) {
+          const carouselContainer = document.querySelector('.carousel-container');
+          const scrollDown = document.querySelector('.scroll_down_info');
+          const owlItems = document.querySelectorAll('.owl-item');
+    
+          const resizeObserver = new ResizeObserver(entry => {
+            const element = entry[0];
+            const elementHeight = element.contentRect.height;
+            const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+            const imgHeight = elementHeight - scrollDownHeight - 50;
+            const imgWidth = imgHeight * 0.75;
+            owlItems.forEach(item => {
+              const img = item.childNodes[0];
+              item.style.height = `${imgHeight}px`;
+              img.style.height = `${imgHeight}px`;
+              img.style.width = `${imgWidth}px`;
+            })
+          });
+          resizeObserver.observe(carouselContainer);
+        }
+      }, false)
     </script>
 </body>
 </html>

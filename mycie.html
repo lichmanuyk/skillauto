@@ -76,7 +76,7 @@
               <img src="./img/washing/IMG_5904.jpg" alt="Mycie">
             </div>
           </div>
-          <div class="scroll_down_info">
+          <a href="#ppf-plan" class="scroll_down_info">
             Auto detailing vs myjnia samochodowa
 Podstawową różnicą jest czas wykonania usługi. Myjnia na tak zwany komplet potrzebuje około 30-40 minut, ze względu na standard usługi i zwykle dużą kolejkę oczekujących, natomiast auto detailing poświęca na auto od 2 do 4 godzin, w zależności od zakresu usługi.
 Studio auto detailingu poświęca dużo czasu na:
@@ -84,8 +84,6 @@ Studio auto detailingu poświęca dużo czasu na:
   dobór odpowiednich środków myjących,
   oczyszczenie lakieru z nalotu drogowego,
   osobne mycie poszczególnych elementów auta ( felgi, progi, rury wydechowe, elementy chromowane, karoseria).
-          <a href="#service-info" class="scroll_action">
-            Dowiedz się więcej poniżej!
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
@@ -96,10 +94,10 @@ Mycie ręczne obejmuje pełne mycie zewnętrza samochodu z woskowaniem, oraz pe�
 Mycie detailingowe od 500 zł.
 Kompleks mycia detailingowego składa się z mycia zewnętrza samochodu oraz pełne czyszczenie lakieru od bitumu, wtrąceń metalicznych i t.d. z woskowaniem karoserii. Wnętrza samochodu również zostanie pełne wyczyszczone.
         </section>
-      </div>
-      <footer>
+        <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
+        </footer>
+      </div>
     </div>
     <script>
       $(document).ready(function() {
@@ -112,9 +110,8 @@ Kompleks mycia detailingowego składa się z mycia zewnętrza samochodu oraz pe�
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -128,6 +125,30 @@ Kompleks mycia detailingowego składa się z mycia zewnętrza samochodu oraz pe�
                 document.getElementById("header").classList.remove('small')
             }
         }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if(window.ResizeObserver) {
+          const carouselContainer = document.querySelector('.carousel-container');
+          const scrollDown = document.querySelector('.scroll_down_info');
+          const owlItems = document.querySelectorAll('.owl-item');
+    
+          const resizeObserver = new ResizeObserver(entry => {
+            const element = entry[0];
+            const elementHeight = element.contentRect.height;
+            const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+            const imgHeight = elementHeight - scrollDownHeight - 50;
+            const imgWidth = imgHeight * 0.75;
+            owlItems.forEach(item => {
+              const img = item.childNodes[0];
+              item.style.height = `${imgHeight}px`;
+              img.style.height = `${imgHeight}px`;
+              img.style.width = `${imgWidth}px`;
+            })
+          });
+          resizeObserver.observe(carouselContainer);
+        }
+      }, false)
     </script>
 </body>
 </html>

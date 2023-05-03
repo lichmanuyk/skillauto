@@ -77,11 +77,9 @@
               <img src="./img/interior/IMG_5899.jpg" alt="Czyszczenie Wnętrza">
             </div>
           </div>
-          <div class="scroll_down_info">
+          <a href="#ppf-plan" class="scroll_down_info">
             Detailing wnętrza samochodu to seria procesów – rozpoczynając od dokładnego wydmuchania sprężonym powietrzem trudno dostępnych szczelin, kanałów,do czyszczenia, po zastosowanie dedykowanych środków dopasowanych do każdej powierzchni.
 Detailing wnętrza to bardzo mocno rozszerzona wersja posprzątania auta. Obejmuje wszystkie elementy wnętrza i precyzyjne czyszczenie każdego z nich.
-          <a href="#service-info" class="scroll_action">
-            Dowiedz się więcej poniżej!
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
@@ -98,10 +96,10 @@ Czyszczenie dachy materiałowego od 150 zł.
 
 Full detailing wrętrza - wycena indywidualna.
         </section>
-      </div>
-      <footer>
+        <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
+        </footer>
+      </div>
     </div>
     <script>
       $(document).ready(function() {
@@ -114,9 +112,8 @@ Full detailing wrętrza - wycena indywidualna.
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -130,6 +127,30 @@ Full detailing wrętrza - wycena indywidualna.
                 document.getElementById("header").classList.remove('small')
             }
         }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if(window.ResizeObserver) {
+          const carouselContainer = document.querySelector('.carousel-container');
+          const scrollDown = document.querySelector('.scroll_down_info');
+          const owlItems = document.querySelectorAll('.owl-item');
+    
+          const resizeObserver = new ResizeObserver(entry => {
+            const element = entry[0];
+            const elementHeight = element.contentRect.height;
+            const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+            const imgHeight = elementHeight - scrollDownHeight - 50;
+            const imgWidth = imgHeight * 0.75;
+            owlItems.forEach(item => {
+              const img = item.childNodes[0];
+              item.style.height = `${imgHeight}px`;
+              img.style.height = `${imgHeight}px`;
+              img.style.width = `${imgWidth}px`;
+            })
+          });
+          resizeObserver.observe(carouselContainer);
+        }
+      }, false)
     </script>
 </body>
 </html>

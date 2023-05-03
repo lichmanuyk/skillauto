@@ -90,13 +90,10 @@
               <img src="./img/ppf/IMG_5929.jpeg" alt="PPF Example">
               <img src="./img/ppf/IMG_5946.jpeg" alt="PPF Example">
               <img src="./img/ppf/IMG_5965.jpeg" alt="PPF Example">
-              
             </div>
           </div>
-          <div class="scroll_down_info">
+          <a href="#ppf-plan" class="scroll_down_info">
             Wybierz pakiet oklejania samochodu folią ochronną PPF
-          <a href="#ppf-plan" class="scroll_action">
-            Dowiedz się więcej poniżej!
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
@@ -129,10 +126,10 @@
         <div class="ppf__individual">
           Istnieje również możliwość skonfigurowania indywidualnego</br>pakietu oklejania auta. W celu wyceny indywidualnego</br>projektu klejenia prosimy <a href="/index.html#contacts">o kontakt</a>.
         </div>
+        <footer class="service-page">
+            <span>©Copyright 2023 | SkillAuto</span>
+        </footer>
       </div>
-      <footer>
-          <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
     </div>
     <script>
       $(document).ready(function() {
@@ -145,9 +142,8 @@
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -162,5 +158,30 @@
             }
         }
     </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if(window.ResizeObserver) {
+        const carouselContainer = document.querySelector('.carousel-container');
+        const scrollDown = document.querySelector('.scroll_down_info');
+        const owlItems = document.querySelectorAll('.owl-item');
+
+        const resizeObserver = new ResizeObserver(entry => {
+          const element = entry[0];
+          const elementHeight = element.contentRect.height;
+          const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+          const imgHeight = elementHeight - scrollDownHeight - 50;
+          const imgWidth = imgHeight * 0.75;
+          owlItems.forEach(item => {
+            const img = item.childNodes[0];
+            item.style.height = `${imgHeight}px`;
+            img.style.height = `${imgHeight}px`;
+            img.style.width = `${imgWidth}px`;
+          })
+        });
+        resizeObserver.observe(carouselContainer);
+      }
+    }, false)
+  </script>
 </body>
 </html>

@@ -85,10 +85,8 @@
               
             </div>
           </div>
-          <div class="scroll_down_info">
-            Powłoki ceramiczne, kwarcowe oraz hydrofobowe to najskuteczniejsze i najtrwalsze zabezpieczenie lakieru, a także powierzchni zabezpieczonych bezbarwnymi foliami ochronnymi. Pozwalają zachować świeży wygląd lakieru przez długi okres. Zwiększają połysk i śliskość lakieru, a także niesamowitą głębię koloru. Zapewniają ochronę lakieru przed niekorzystnym działaniem czynników zewnętrznych, chemią o różnym pH, solą drogową i mikro zarysowaniami.  
-          <a href="#service-info" class="scroll_action">
-            Dowiedz się więcej poniżej!
+          <a href="#ppf-plan" class="scroll_down_info">
+            Powłoki ceramiczne, kwarcowe oraz hydrofobowe to najskuteczniejsze i najtrwalsze zabezpieczenie lakieru, a także powierzchni zabezpieczonych bezbarwnymi foliami ochronnymi. Pozwalają zachować świeży wygląd lakieru przez długi okres. Zwiększają połysk i śliskość lakieru, a także niesamowitą głębię koloru. Zapewniają ochronę lakieru przed niekorzystnym działaniem czynników zewnętrznych, chemią o różnym pH, solą drogową i mikro zarysowaniami.
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
@@ -102,10 +100,10 @@
         </section>
 
         Istnieje również możliwość skonfigurowania indywidualnego</br>pakietu oklejania auta. W celu wyceny indywidualnego</br>projektu klejenia prosimy <a href="/index.html#contacts">o kontakt</a>.
-      </div>
-      <footer>
+        <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
+        </footer>
+      </div>
     </div>
     <script>
       $(document).ready(function() {
@@ -118,9 +116,8 @@
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -134,6 +131,30 @@
                 document.getElementById("header").classList.remove('small')
             }
         }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if(window.ResizeObserver) {
+          const carouselContainer = document.querySelector('.carousel-container');
+          const scrollDown = document.querySelector('.scroll_down_info');
+          const owlItems = document.querySelectorAll('.owl-item');
+    
+          const resizeObserver = new ResizeObserver(entry => {
+            const element = entry[0];
+            const elementHeight = element.contentRect.height;
+            const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+            const imgHeight = elementHeight - scrollDownHeight - 50;
+            const imgWidth = imgHeight * 0.75;
+            owlItems.forEach(item => {
+              const img = item.childNodes[0];
+              item.style.height = `${imgHeight}px`;
+              img.style.height = `${imgHeight}px`;
+              img.style.width = `${imgWidth}px`;
+            })
+          });
+          resizeObserver.observe(carouselContainer);
+        }
+      }, false)
     </script>
 </body>
 </html>

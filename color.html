@@ -75,22 +75,20 @@
               <img src="./img/color/IMG_5815.jpg" alt="Zmiana Koloru">
             </div>
           </div>
-          <div class="scroll_down_info">
+          <a href="#ppf-plan" class="scroll_down_info">
             СТРЕЛОЧКА ВНИЗ НЕ НУЖНА
             Czym jest zmiana koloru auta?
 Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmianę wizualną samochodu, podniesienie jego walorów użytkowych i przedłużenie jego żywotności. Dzięki oklejeniu samochodu odzyskuje efektowny wygląd i jest wygodniejszy w użytkowaniu. Zabiegi tego typu są sporą grupą i obejmują zarówno oklejanie folią w danym kolorze lub ochronną, czy grafiką reklamową przyciemnianie szyb.Częstym zabiegiem jest przyciemnianie szyb samochodowych, dzięki któremu z jednej strony pojazd nabiera bardziej luksusowego wyglądu, a z drugiej strony jest bardziej funkcjonalny. Wszystkie nasze zabiegi wykonywane folią wymagają doświadczenia i precyzji, które dla nas są najwyższą wartością.
-          <a href="#service-info" class="scroll_action">
-            Dowiedz się więcej poniżej!
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
         <section class="service-info" id="service-info">
           
         </section>
-      </div>
-      <footer>
+        <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
-      </footer>
+        </footer>
+      </div>
     </div>
     <script>
       $(document).ready(function() {
@@ -103,9 +101,8 @@ Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmi
           autoplayHoverPause: true,
           nav: true,
           navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
-          margin: 70,
+          margin: 25,
           center: true,
-          autoHeight: true,
           mouseDrag: false,
           smartSpeed: 1500,
           // responsiveClass: true,
@@ -119,6 +116,30 @@ Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmi
                 document.getElementById("header").classList.remove('small')
             }
         }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if(window.ResizeObserver) {
+          const carouselContainer = document.querySelector('.carousel-container');
+          const scrollDown = document.querySelector('.scroll_down_info');
+          const owlItems = document.querySelectorAll('.owl-item');
+    
+          const resizeObserver = new ResizeObserver(entry => {
+            const element = entry[0];
+            const elementHeight = element.contentRect.height;
+            const scrollDownHeight = Math.ceil(scrollDown.getBoundingClientRect().height) + 20;
+            const imgHeight = elementHeight - scrollDownHeight - 50;
+            const imgWidth = imgHeight * 0.75;
+            owlItems.forEach(item => {
+              const img = item.childNodes[0];
+              item.style.height = `${imgHeight}px`;
+              img.style.height = `${imgHeight}px`;
+              img.style.width = `${imgWidth}px`;
+            })
+          });
+          resizeObserver.observe(carouselContainer);
+        }
+      }, false)
     </script>
 </body>
 </html>

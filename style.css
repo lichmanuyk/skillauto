@@ -403,6 +403,11 @@ footer {
     font-size: 12px;
 }
 
+footer.service-page {
+    align-self: stretch;
+    padding: 22px 0;
+}
+
 
 @media screen and (max-width: 1435px) {    
     .menu_item {
@@ -532,33 +537,35 @@ footer {
 }
 
 .content {
-    flex: 1;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 100px 30px 0;
     box-sizing: border-box;
     flex-direction: column;
 }
 
 .carousel-container {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel {
    width: 100%;
-   height: 600px; 
+   flex: 1;
    display: flex; 
    justify-content: center;
    align-items: center;
-   margin-top: 70px;
-   margin-bottom: 50px;
+   margin-top: 25px;
+   margin-bottom: 25px;
 }
 
 .owl-nav {
     position: absolute;
-    top: 300px;
+    top: 50%;
     transform: translateY(-50%);
     bottom: 0;
     right: 0;
@@ -582,47 +589,50 @@ footer {
     border-radius: 50%;
 }
 
+.owl-carousel {
+    height: 100%;
+}
+
+.owl-carousel  .owl-stage-outer {
+    height: 100%;
+}
+
 .owl-carousel .owl-stage {
-    max-height: 100%!important;
+    height: 100%!important;
+}
+
+.owl-carousel .owl-item {
+    height: 100%!important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .owl-carousel .owl-item img {
     width: 100%;
-    height: 600px!important;
     object-fit: cover;
     object-position: center;
   }
 
 .scroll_down_info {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
     font-size: 24px;
     display: flex;
-    flex-direction: column;
-}
-
-.scroll_down_info .scroll_action {
-    margin-top: 20px;
     color: #a08565;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    margin: 0 20px 20px;
     cursor: pointer;
     transition: all 0.5s ease;
-    align-self: center;
+    text-decoration: none;
 }
 
-.scroll_down_info .scroll_action:hover {
+.scroll_down_info:hover {
     transform: scale(105%);
 }
 
-.scroll_down_info .scroll_action img {
+.scroll_down_info img {
     width: 50px;
     height: 50px;
     margin-top: 10px;
