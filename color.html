@@ -105,7 +105,27 @@ Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmi
           center: true,
           mouseDrag: false,
           smartSpeed: 1500,
-          // responsiveClass: true,
+          responsive:{
+            0: {
+              items: 1
+            },
+
+            600: {
+              items: 1
+            },
+
+            750: {
+              items: 2
+            },
+
+            1100: {
+              items: 3
+            },
+
+            1366: {
+              items: 3
+            }
+          }
         });
       });
         window.onscroll = scrollFunction;

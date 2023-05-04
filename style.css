@@ -408,126 +408,7 @@ footer.service-page {
     padding: 22px 0;
 }
 
-
-@media screen and (max-width: 1435px) {    
-    .menu_item {
-        padding: 0 15px;
-    }
-
-    .logo {
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 1235px) {
-    .logo {
-        margin-right: 50px;
-    }
-}
-
-@media screen and (max-width: 1180px) {
-    .header {
-        padding: 10px 50px;
-    }
-}
-
-@media screen and (max-width: 1100px) {    
-    .header .menu {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .logo {
-        margin-right: 0;
-    }
-}
-
-@media screen and (max-width: 969px) {    
-    .map {
-        height: auto;
-    }
-
-    .map__iframe {
-        margin-top: 30px;
-        height: 420px;
-    }
-}
-
-@media screen and (max-width: 700px) {    
-    .service {
-        width: 100%;
-    }
-    
-    .header {
-        padding: 10px 50px;
-    }
-
-    .map {
-        flex-direction: column;
-    }
-
-    .map__iframe {
-        height: 420px!important;
-    }
-
-    .map__content {
-        flex-wrap: wrap;
-    }
-
-    .right {
-        padding-bottom: 0!important;
-        padding-top: 30px;
-    }
-
-    .map_contact:last-child {
-        margin-bottom: 0;
-    }
-
-    .form {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 500px) {    
-    .logo {
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 450px) {    
-    .service {
-        height: 350px;
-    }
-
-    .map {
-        padding: 30px;
-    }
-
-    .logo {
-        margin-right: 60px;
-    }
-}
-
-@media screen and (max-width: 370px) {    
-    .form button {
-        width: 150px;
-    }
-
-    .map__content .right {
-        padding: 20px 0;
-    }
-
-    .map_contact img {
-        margin-right: 8px;
-    }
-
-    .map {
-        padding: 30px 20px;
-    }
-}
+/* Styles for service pages */
 
 .wrapper {
     width: 100vw;
@@ -587,6 +468,7 @@ footer.service-page {
     background-color: rgba(0, 0, 0, .7);
     padding: 20px;
     border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .owl-carousel {
@@ -643,13 +525,13 @@ footer.service-page {
     border-top: 1px solid #a08565;
     display: flex;
     justify-content: center;
-    padding: 0 200px 40px;
+    padding: 0 10% 40px;
     flex-wrap: wrap;
 }
 
 .plan {
-    width: 40%;
-    height: 395px;
+    width: 45%;
+    height: 420px;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -666,8 +548,10 @@ footer.service-page {
 }
 
 .plan img {
-    width: 330px;
-    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    margin: 0 20px;
+    object-fit: contain;
 }
 
 .plan__title {
@@ -699,6 +583,7 @@ footer.service-page {
     font-size: 24px;
     color: #a08565;
     line-height: 40px;
+    padding: 0 20px;
 }
 
 .ppf__individual a {
@@ -712,4 +597,181 @@ footer.service-page {
     justify-content: center;
     padding: 20px 200px 40px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 1435px) {    
+    .menu_item {
+        padding: 0 15px;
+    }
+
+    .logo {
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1235px) {
+    .logo {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .header {
+        padding: 10px 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {    
+    .header .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .ppf-plans {
+        padding: 0 20px 40px;
+    }
+
+    .plan {
+        margin-top: 30px;
+    }
+    
+    .plan:nth-child(odd) {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 969px) {    
+    .map {
+        height: auto;
+    }
+
+    .map__iframe {
+        margin-top: 30px;
+        height: 420px;
+    }
+
+    .plan img {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 770px) {    
+    .owl-nav {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {    
+    .service {
+        width: 100%;
+    }
+    
+    .header {
+        padding: 10px 50px;
+    }
+
+    .map {
+        flex-direction: column;
+    }
+
+    .map__iframe {
+        height: 420px!important;
+    }
+
+    .map__content {
+        flex-wrap: wrap;
+    }
+
+    .right {
+        padding-bottom: 0!important;
+        padding-top: 30px;
+    }
+
+    .map_contact:last-child {
+        margin-bottom: 0;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    .owl-nav button img {
+        width: 30px;
+        height: 30px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .plan {
+        width: 100%;
+        height: 420px;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    .plan:nth-child(odd) {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {    
+    .logo {
+        margin-right: 100px;
+    }
+
+    .scroll_down_info {
+        font-size: 18px;
+    }
+
+    .scroll_down_info img {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    .ppf__individual {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 450px) {    
+    .service {
+        height: 350px;
+    }
+
+    .map {
+        padding: 30px;
+    }
+
+    .logo {
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 370px) {    
+    .form button {
+        width: 150px;
+    }
+
+    .map__content .right {
+        padding: 20px 0;
+    }
+
+    .map_contact img {
+        margin-right: 8px;
+    }
+
+    .map {
+        padding: 30px 20px;
+    }
 }
