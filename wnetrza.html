@@ -147,6 +147,16 @@ Full detailing wrętrza - wycena indywidualna.
                 document.getElementById("header").classList.remove('small')
             }
         }
+
+        $(document).ready(function() {
+            const menuButton = document.querySelector('#menu__toggle');
+            const menuItems = document.querySelectorAll('.menu__item');
+            Array.from(menuItems).forEach(menuItem => {
+                menuItem.addEventListener('click', () => {
+                    menuButton.checked = false;
+                })
+            })
+        })
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {

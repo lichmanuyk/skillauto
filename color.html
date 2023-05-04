@@ -76,15 +76,15 @@
             </div>
           </div>
           <a href="#ppf-plan" class="scroll_down_info">
-            СТРЕЛОЧКА ВНИЗ НЕ НУЖНА
             Czym jest zmiana koloru auta?
-Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmianę wizualną samochodu, podniesienie jego walorów użytkowych i przedłużenie jego żywotności. Dzięki oklejeniu samochodu odzyskuje efektowny wygląd i jest wygodniejszy w użytkowaniu. Zabiegi tego typu są sporą grupą i obejmują zarówno oklejanie folią w danym kolorze lub ochronną, czy grafiką reklamową przyciemnianie szyb.Częstym zabiegiem jest przyciemnianie szyb samochodowych, dzięki któremu z jednej strony pojazd nabiera bardziej luksusowego wyglądu, a z drugiej strony jest bardziej funkcjonalny. Wszystkie nasze zabiegi wykonywane folią wymagają doświadczenia i precyzji, które dla nas są najwyższą wartością.
             <img src="./img/down-arrow.png" alt="Down-arrow">
           </a>
         </section>
         <section class="service-info" id="service-info">
-          
-        </section>
+Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmianę wizualną samochodu, podniesienie jego walorów użytkowych i przedłużenie jego żywotności. Dzięki oklejeniu samochodu odzyskuje efektowny wygląd i jest wygodniejszy w użytkowaniu. Zabiegi tego typu są sporą grupą i obejmują zarówno oklejanie folią w danym kolorze lub ochronną, czy grafiką reklamową przyciemnianie szyb.Częstym zabiegiem jest przyciemnianie szyb samochodowych, dzięki któremu z jednej strony pojazd nabiera bardziej luksusowego wyglądu, a z drugiej strony jest bardziej funkcjonalny. Wszystkie nasze zabiegi wykonywane folią wymagają doświadczenia i precyzji, które dla nas są najwyższą wartością.
+        </br></br>Cena od 7 500 zl netto
+      </br></br>W celu ustalenia szczególów wyceny zapraszam do skontaktowania się z Nami.
+</section>
         <footer class="service-page">
           <span>©Copyright 2023 | SkillAuto</span>
         </footer>
@@ -136,6 +136,16 @@ Zmiana koloru samochodu to nic innego jak wszystkie procesy, mające na celu zmi
                 document.getElementById("header").classList.remove('small')
             }
         }
+
+        $(document).ready(function() {
+            const menuButton = document.querySelector('#menu__toggle');
+            const menuItems = document.querySelectorAll('.menu__item');
+            Array.from(menuItems).forEach(menuItem => {
+                menuItem.addEventListener('click', () => {
+                    menuButton.checked = false;
+                })
+            })
+        })
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {

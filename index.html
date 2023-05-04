@@ -148,6 +148,16 @@
         }
 
         $(document).ready(function() {
+            const menuButton = document.querySelector('#menu__toggle');
+            const menuItems = document.querySelectorAll('.menu__item');
+            Array.from(menuItems).forEach(menuItem => {
+                menuItem.addEventListener('click', () => {
+                    menuButton.checked = false;
+                })
+            })
+        })
+
+        $(document).ready(function() {
             $("form").submit(function() {
                 var th = $(this);
                 $.ajax({

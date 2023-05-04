@@ -509,6 +509,7 @@ footer.service-page {
     cursor: pointer;
     transition: all 0.5s ease;
     text-decoration: none;
+    padding: 0 50px;
 }
 
 .scroll_down_info:hover {
@@ -598,6 +599,7 @@ footer.service-page {
     justify-content: center;
     padding: 20px 200px 40px;
     text-align: center;
+    align-self: stretch;
 }
 
 
