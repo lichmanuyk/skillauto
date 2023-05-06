@@ -593,13 +593,46 @@ footer.service-page {
 }
 
 .service-info {
-    border-top: 1px solid #a08565;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 200px 40px;
+    padding: 0 200px 30px;
     text-align: center;
     align-self: stretch;
+}
+
+.service-info-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.service-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.service-info-item__title {
+    color: #a08565;
+    font-size: 27px;
+}
+
+.service-info-item__desc {
+    margin-top: 15px;
+}
+
+.service-info-item__price {
+    margin-top: 15px;
+}
+
+.service-info-item__price span {
+    color: #a08565;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 
