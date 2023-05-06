@@ -137,43 +137,7 @@
         <span>©Copyright 2023 | SkillAuto</span>
     </footer>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-        window.onscroll = scrollFunction;
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("header").classList.add('small');
-            } else {
-                document.getElementById("header").classList.remove('small')
-            }
-        }
-
-        $(document).ready(function() {
-            const menuButton = document.querySelector('#menu__toggle');
-            const menuItems = document.querySelectorAll('.menu__item');
-            Array.from(menuItems).forEach(menuItem => {
-                menuItem.addEventListener('click', () => {
-                    menuButton.checked = false;
-                })
-            })
-        })
-
-        $(document).ready(function() {
-            $("form").submit(function() {
-                var th = $(this);
-                $.ajax({
-                    type: "POST",
-                    url: "./mail.php",
-                    data: th.serialize()
-                }).done(function() {
-                    alert("Спасибо, мы с вами свяжемся!");
-                    setTimeout(function() {
-                        // Done Functions
-                        th.trigger("reset");
-                    }, 1000);
-                });
-                return false;
-            });
-        });
-    </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/form-post.js"></script>
 </body>
 </html>
