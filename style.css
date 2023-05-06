@@ -651,7 +651,7 @@ footer.service-page {
     }
 }
 
-@media screen and (max-width: 969px) {    
+@media screen and (max-width: 1012px) {
     .map {
         height: auto;
     }
@@ -660,11 +660,12 @@ footer.service-page {
         margin-top: 30px;
         height: 420px;
     }
+}
 
+@media screen and (max-width: 969px) {
     .plan img {
         width: 80%;
     }
-
 }
 
 @media screen and (max-width: 770px) {    
@@ -711,6 +712,12 @@ footer.service-page {
         width: 30px;
         height: 30px;
         padding: 15px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .map__content {
+        flex-direction: column;
     }
 }
 
