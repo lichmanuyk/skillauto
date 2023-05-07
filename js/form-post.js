@@ -6,9 +6,8 @@ $(document).ready(function() {
           url: "./mail.php",
           data: th.serialize()
       }).done(function() {
-          alert("Спасибо, мы с вами свяжемся!");
+          alert("Dziękujemy, wkrótce się z Tobą skontaktujemy!");
           setTimeout(function() {
-              // Done Functions
               th.trigger("reset");
           }, 1000);
       });
