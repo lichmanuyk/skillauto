@@ -1,4 +1,4 @@
-window.onscroll = scrollFunction;
+window.addEventListener('scroll', scrollFunction, {passive: true});
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("header").classList.add('small');
