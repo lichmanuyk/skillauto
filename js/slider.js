@@ -7,7 +7,7 @@ $(document).ready(function() {
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
     nav: true,
-    navText: ["<img src='img/back.png'>", "<img src='img/next.png'>"],
+    navText: ["<img src='img/back.webp'>", "<img src='img/next.webp'>"],
     margin: 25,
     center: true,
     mouseDrag: false,

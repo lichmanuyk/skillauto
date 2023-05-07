@@ -242,27 +242,27 @@ h1 {
 }
 
 .service:first-child {
-    background: url("./img/service-bg/ppf-bg.JPG") 0% 50% / cover no-repeat;
+    background: url("./img/service-bg/ppf-bg.webp") 0% 50% / cover no-repeat;
 }
 
 .service:nth-child(2) {
-    background: url("./img/service-bg/ceramica-bg.JPG") 0% 46% / cover no-repeat;
+    background: url("./img/service-bg/ceramica-bg.webp") 0% 46% / cover no-repeat;
 }
 
 .service:nth-child(3) {
-    background: url("./img/service-bg/polerka-bg.JPG") 0% 56% / cover no-repeat;
+    background: url("./img/service-bg/polerka-bg.webp") 0% 56% / cover no-repeat;
 }
 
 .service:nth-child(4) {
-    background: url("./img/service-bg/myjnia-bg.JPG") 0% 31% / cover no-repeat;
+    background: url("./img/service-bg/myjnia-bg.webp") 0% 31% / cover no-repeat;
 }
 
 .service:nth-child(5) {
-    background: url("./img/service-bg/pranie-bg-1.JPG") 0% 50% / cover no-repeat;
+    background: url("./img/service-bg/pranie-bg-1.webp") 0% 50% / cover no-repeat;
 }
 
 .service:nth-child(6) {
-    background: url("./img/service-bg/color-bg.JPG") 0% 19% / cover no-repeat;
+    background: url("./img/service-bg/color-bg.webp") 0% 19% / cover no-repeat;
 }
 
 .service__content {
