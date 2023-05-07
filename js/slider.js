@@ -6,6 +6,7 @@ $(document).ready(function() {
     autoplay:true,
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
+    lazyLoad:true,
     nav: true,
     navText: ["<img src='img/back.webp'>", "<img src='img/next.webp'>"],
     margin: 25,
