@@ -449,7 +449,7 @@ footer.service-page {
    align-items: center;
    margin-top: 25px;
    margin-bottom: 25px;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 .owl-nav {
