@@ -7,6 +7,8 @@ $(document).ready(function() {
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
     nav: true,
+    lazyLoad: true,
+    lazyLoadEager: 4,
     navText: ["<img src='img/back.webp'>", "<img src='img/next.webp'>"],
     margin: 25,
     center: true,

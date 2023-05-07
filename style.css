@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto.woff2') format('woff2');
     font-display: swap;
-}
+} */
 
 html, body {
     padding: 0;
@@ -449,7 +449,7 @@ footer.service-page {
    align-items: center;
    margin-top: 25px;
    margin-bottom: 25px;
-   /* overflow: hidden; */
+   overflow: hidden;
 }
 
 .owl-nav {
